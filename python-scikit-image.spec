@@ -20,7 +20,7 @@ BuildRequires:	python3dist(networkx)
 BuildRequires:	python3dist(pillow)
 BuildRequires:	python3dist(pytest)
 BuildRequires:	python3dist(scipy)
-BuildRequires:	python3dist(tiffile)
+BuildRequires:	python3dist(tifffile)
 BuildRequires:	python3dist(pywavelets)
 
 %description
