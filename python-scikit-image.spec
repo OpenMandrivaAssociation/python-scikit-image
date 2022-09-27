@@ -3,7 +3,7 @@
 Summary:	Image processing in Python
 Name:		python-%{module}
 Version:	0.18.3
-Release:	1
+Release:	2
 Source0:	https://github.com/scikit-image/scikit-image/archive/refs/tags/v%{version}/%{module}-%{version}.tar.gz
 License:	BSD
 Group:		Development/Python
