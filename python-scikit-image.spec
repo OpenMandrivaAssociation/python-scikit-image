@@ -1,10 +1,12 @@
 %define module	 scikit-image
+%define fname %(n=%{module}; echo ${n:0:1})
 
 Summary:	Image processing in Python
 Name:		python-%{module}
 Version:	0.18.3
-Release:	2
-Source0:	https://github.com/scikit-image/scikit-image/archive/refs/tags/v%{version}/%{module}-%{version}.tar.gz
+Release:	3
+#Source0:	https://github.com/scikit-image/scikit-image/archive/refs/tags/v%{version}/%{module}-%{version}.tar.gz
+Source0:	https://pypi.io/packages/source/%{fname}/%{module}/%{module}-%{version}.tar.gz
 License:	BSD
 Group:		Development/Python
 Url:		https://scikit-image.org/
@@ -12,7 +14,9 @@ Url:		https://scikit-image.org/
 BuildRequires:	pkgconfig(python3)
 BuildRequires:	python3dist(cython)
 BuildRequires:	python3dist(numpy)
+BuildRequires:	python3dist(pip)
 BuildRequires:	python3dist(setuptools)
+BuildRequires:	python3dist(wheel)
 # for tests
 BuildRequires:	python3dist(imageio)
 BuildRequires:	python3dist(matplotlib)
