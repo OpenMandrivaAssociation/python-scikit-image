@@ -35,7 +35,7 @@ This is a collection of image processing algorithms for Python.
 %doc CONTRIBUTORS.txt RELEASE.txt
 %{_bindir}/*
 %{python3_sitearch}/skimage
-%{python3_sitearch}/scikit_image-*.dist-info
+%{python3_sitearch}/scikit_image-%{version}-py%{python_version}.egg-info/
 
 #---------------------------------------------------------------------------
 
@@ -47,3 +47,4 @@ This is a collection of image processing algorithms for Python.
 
 %install
 %py3_install
+
