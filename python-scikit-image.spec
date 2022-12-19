@@ -1,12 +1,9 @@
-%define module	 scikit-image
-%define fname %(n=%{module}; echo ${n:0:1})
-
 Summary:	Image processing in Python
-Name:		python-%{module}
-Version:	0.18.3
-Release:	3
-#Source0:	https://github.com/scikit-image/scikit-image/archive/refs/tags/v%{version}/%{module}-%{version}.tar.gz
-Source0:	https://pypi.io/packages/source/%{fname}/%{module}/%{module}-%{version}.tar.gz
+Name:		python-scikit-image
+Version:	0.19.3
+Release:	1
+#Source0:	https://github.com/scikit-image/scikit-image/archive/refs/tags/v%{version}/scikit-image-%{version}.tar.gz
+Source0:	https://pypi.io/packages/source/s/scikit-image/scikit-image-%{version}.tar.gz
 License:	BSD
 Group:		Development/Python
 Url:		https://scikit-image.org/
@@ -34,17 +31,17 @@ This is a collection of image processing algorithms for Python.
 %license LICENSE.txt
 %doc CONTRIBUTORS.txt RELEASE.txt
 %{_bindir}/*
-%{python3_sitearch}/skimage
-%{python3_sitearch}/scikit_image-%{version}-py%{python_version}.egg-info/
+%{py_platsitedir}/skimage
+%{py_platsitedir}/scikit_image*-info/
 
 #---------------------------------------------------------------------------
 
 %prep
-%autosetup -n %{module}-%{version}
+%autosetup -n scikit-image-%{version}
 
 %build
-%py3_build
+%py_build
 
 %install
-%py3_install
+%py_install
 
