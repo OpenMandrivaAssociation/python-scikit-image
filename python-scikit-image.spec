@@ -13,7 +13,7 @@ Url:		https://scikit-image.org/
 
 BuildRequires:	pkgconfig(python3)
 BuildRequires:	python3dist(cython)
-#BuildRequires:	python3dist(pythran)
+BuildRequires:	python3dist(pythran)
 BuildRequires:	python3dist(numpy)
 BuildRequires:	python3dist(pip)
 BuildRequires:	python3dist(setuptools)
