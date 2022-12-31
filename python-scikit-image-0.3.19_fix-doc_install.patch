@@ -1,0 +1,15 @@
+diff --git a/setup.py b/setup.py
+index aa06886e366..db9db42d7dc 100755
+--- a/setup.py
++++ b/setup.py
+@@ -245,7 +245,8 @@ def configuration(parent_package='', top_path=None):
+         install_requires=INSTALL_REQUIRES,
+         extras_require=extras_require,
+         python_requires='>=3.7',
+-        packages=setuptools.find_packages(exclude=['doc', 'benchmarks']),
++        packages=setuptools.find_packages(
++            exclude=['doc', 'doc.*', 'benchmarks']),
+         package_data={
+             # distribute Cython source files in the wheel
+             "": ["*.pyx", "*.pxd", "*.pxi", ""],
+

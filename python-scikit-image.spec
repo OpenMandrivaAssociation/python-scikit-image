@@ -4,13 +4,16 @@ Version:	0.19.3
 Release:	1
 #Source0:	https://github.com/scikit-image/scikit-image/archive/refs/tags/v%{version}/scikit-image-%{version}.tar.gz
 Source0:	https://pypi.io/packages/source/s/scikit-image/scikit-image-%{version}.tar.gz
+# (upstream)
+# https://github.com/scikit-image/scikit-image/pull/6428
+Patch0:		python-scikit-image-0.3.19_fix-doc_install.patch
 License:	BSD
 Group:		Development/Python
 Url:		https://scikit-image.org/
 
 BuildRequires:	pkgconfig(python3)
 BuildRequires:	python3dist(cython)
-BuildRequires:	python3dist(pythran)
+#BuildRequires:	python3dist(pythran)
 BuildRequires:	python3dist(numpy)
 BuildRequires:	python3dist(pip)
 BuildRequires:	python3dist(setuptools)
