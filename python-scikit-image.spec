@@ -1,9 +1,9 @@
 Summary:	Image processing in Python
 Name:		python-scikit-image
-Version:	0.20.0
+Version:	0.21.0
 Release:	1
-#Source0:	https://github.com/scikit-image/scikit-image/archive/refs/tags/v%{version}/scikit-image-%{version}.tar.gz
-Source0:	https://pypi.io/packages/source/s/scikit-image/scikit_image-%{version}.tar.gz
+Source0:	https://github.com/scikit-image/scikit-image/archive/refs/tags/v%{version}/scikit-image-%{version}.tar.gz
+#Source0:	https://pypi.io/packages/source/s/scikit-image/scikit_image-%{version}.tar.gz
 # (upstream)
 # https://github.com/scikit-image/scikit-image/pull/6428
 #Patch0:		python-scikit-image-0.3.19_fix-doc_install.patch
@@ -43,7 +43,7 @@ This is a collection of image processing algorithms for Python.
 #---------------------------------------------------------------------------
 
 %prep
-%autosetup -n scikit_image-%{version}
+%autosetup -n scikit-image-%{version}
 
 %build
 %py_build
