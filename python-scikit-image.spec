@@ -4,7 +4,7 @@
 Name:		python-scikit-image
 Summary:	Image processing in Python
 Version:	0.26.0
-Release:	1
+Release:	2
 Source0:	https://github.com/scikit-image/scikit-image/archive/refs/tags/v%{version}/%{module}-%{version}.tar.gz#/%{name}-%{version}.tar.gz
 #Source0:	https://pypi.io/packages/source/s/scikit-image/scikit_image-%%{version}.tar.gz
 # (upstream)
@@ -16,7 +16,7 @@ URL:		https://scikit-image.org/
 BuildSystem:	python
 BuildRequires:	meson
 BuildRequires:	ninja
-BuildRequires:	pkgconfig(python)
+BuildRequires:	pkgconfig(python3)
 BuildRequires:	python%{pyver}dist(cython)
 BuildRequires:	python%{pyver}dist(imageio)
 BuildRequires:	python%{pyver}dist(lazy-loader)
@@ -42,7 +42,7 @@ This is a collection of image processing algorithms for Python.
 
 %prep
 %autosetup -n %{module}-%{version} -p1
-sed -Ei "1{s@/usr/bin/env python\$@%{_bindir}/python3@}" src/skimage/_build_utils/*.py
+sed -Ei "1{s@/usr/bin/env python\$@%{_bindir}/python@}" src/skimage/_build_utils/*.py
 chmod -x src/skimage/measure/{__init__,_find_contours}.py
 # we dont do code conformance testing
 rm -rf tests/conftest.py
